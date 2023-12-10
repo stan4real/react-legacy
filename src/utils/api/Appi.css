@@ -1,0 +1,6 @@
+.ButtonBar{
+    height: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2.5rem;
+}
