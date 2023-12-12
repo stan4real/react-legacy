@@ -9,7 +9,6 @@ const Appi = () => {
     const [users,setUsers] = useState([])
     const [requestError, setRequestError] = useState()
     const [userId,setUserId] = useState(2)
-    //const [search,setSearch] = useState('')
 
     const axiosTest = axios.create({
         headers : {

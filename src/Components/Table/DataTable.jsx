@@ -1,16 +1,6 @@
 import * as React from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
-// const getApplyFilterId = (value) => {
-//   if (!value ) {
-//       return null;
-//   }
-//   return (params) => {
-//     if (params.value === Number(value) ) {
-//       return true
-//     }
-//   };
-// };
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 70, },
