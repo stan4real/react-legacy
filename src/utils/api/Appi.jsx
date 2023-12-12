@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import axios from 'axios'
 import { Button } from '@mui/material'
 import DataTable from '../../Components/Table/DataTable'
@@ -25,6 +25,10 @@ const Appi = () => {
         } catch (err) {
             setRequestError(err.message)
         }})
+        
+useEffect(() => {
+    fetchData()
+}, [])
 
     const postData = () =>{ axiosTest.post('https://gps.autotracker.group/api/devices',
         {id:11,
@@ -62,24 +66,10 @@ const Appi = () => {
         });
     }
 
-    // {users.filter((item)=>{
-    //     if (search==='' ){
-    //     return item }
-    //     else if(item.id.toString()===(search)){
-    //         return item
-    //     }
-    // })
-    // .map(item => {
-    //     return <p key = {item.id}>{item.name}{' '} {item.id}</p>
-    // })}
-        // <div>
-        //     <input type="text" placeholder='Введите Id для поиска' onChange={(e)=> setSearch(e.target.value)}></input>
-        // </div>
-        
+    
   return (
     <div className='container'>
         <div className='ButtonBar'>
-            <Button onClick={() => fetchData()}>Получить пользователей</Button>
             <Button onClick={() => postData()}>Добавить</Button>
             <Button onClick={() => deleteData()}>Удалить</Button>
         </div>
