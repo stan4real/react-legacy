@@ -7,7 +7,8 @@ import {
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Root from './routes/root';
-import DeviceList from './routes/App';
+import Objects from './Components/pages/Objects';
+import ComingSoon from './Components/pages/ComingSoon';
 
 const router = createBrowserRouter([
   {
@@ -15,28 +16,29 @@ const router = createBrowserRouter([
     element: <Root/>,
     children:[{
       path:"/objects",
-    element:<DeviceList/>
+    element:<Objects/>
     },
     {
       path:"/room",
-    element:''
+    element:<ComingSoon/>
     },
     {
       path:"/users",
-    element:''
+    element:<ComingSoon/>
     },
     {
       path:"/drivers",
-    element:''
+    element:<ComingSoon/>
     },
     {
       path:"/messages",
-    element:''
+    element:<ComingSoon/>
     },
-  ]
+  ],
   },
-  
-]);
+], 
+{basename:'/react-legacy'}
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

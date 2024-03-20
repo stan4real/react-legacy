@@ -49,7 +49,6 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-
           <Typography
             variant="h6"
             
@@ -66,9 +65,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -124,7 +121,6 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-          
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (

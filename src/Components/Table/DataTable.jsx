@@ -1,15 +1,14 @@
 import * as React from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
-
 const columns = [
   { field: 'id', headerName: 'ID', width: 70, },
   { field: 'name', headerName: 'Name', width: 200, getApplyQuickFilterFn: undefined },
-  { field: 'status', headerName: 'Статус', width: 90, getApplyQuickFilterFn: undefined  },
-  { field: 'uniqueId', headerName: 'UID', width: 70, getApplyQuickFilterFn: undefined },
-  { field: 'phone', headerName: 'Телефон', type:'bigint', getApplyQuickFilterFn: undefined, width: 180},
-  { field: 'category', headerName: 'Категория', type:'string', getApplyQuickFilterFn: undefined, width: 180},
-  { field: 'lastUpdate', headerName: 'Последнее обновление', type:'timestamp', getApplyQuickFilterFn: undefined, width: 240},
+  { field: 'status', headerName: 'Status', width: 90, getApplyQuickFilterFn: undefined  },
+  { field: 'model', headerName: 'Model', width: 90, getApplyQuickFilterFn: undefined },
+  { field: 'phone', headerName: 'Tel.', type:'bigint', getApplyQuickFilterFn: undefined, width: 180},
+  { field: 'category', headerName: 'Category', type:'string', width: 180},
+  { field: 'lastUpdate', headerName: 'Last Update', type:'timestamp', getApplyQuickFilterFn: undefined, width: 240},
 ];
 
 
